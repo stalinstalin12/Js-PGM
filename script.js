@@ -118,3 +118,82 @@ console.log("\n\n\n");{
 }
 
 
+
+//Timer functions
+// console.log("\n\n\n");
+// {
+// setTimeout(function(){
+//     console.log("SET TIMEOUT");
+// },6000);
+
+// function zero(value){
+//    return value < 10 ? "0"+value :value;
+// }
+// function show(){
+//     let dt=new Date();
+//     console.log(dt);
+
+//     let hours=dt.getHours();
+//     console.log(hours);
+
+//     let ampm=hours < 12 ? "am":"pm";
+//     console.log(ampm);
+
+//     let time =document.getElementById('time');
+//     console.log(time);
+    
+//     time.innerHTML=zero(hours)+":"+zero(dt.getMinutes())+":"+zero(dt.getSeconds())
+
+//     setTimeout(show,1000);
+// }
+// show();
+
+// }
+
+
+
+//event handling
+console.log("\n\n\n");
+{
+    let btn=document.getElementById('btn');
+    console.log(btn);
+
+    btn.addEventListener('click',function(){
+        console.log("BUTTON CLICKED");
+    });
+
+    btn.addEventListener('mouseover',function(){
+        console.log("MOUSE OVER ");
+    });
+
+    btn.addEventListener('mouseout',function(){
+        console.log("MOUSE OUT ");
+    });
+
+    btn.addEventListener('mousedown',function(){
+        console.log("MOUSE DOWN ");
+    });
+
+    btn.addEventListener('mouseup',function(){
+        console.log(" MOUSE UP");
+    });
+
+    btn.addEventListener('mousemove',function(){
+        console.log("MOUSE MOVE");
+    });
+
+    let txt=document.getElementById('txt');
+    console.log(txt);
+
+    txt.addEventListener('keydown',function(){
+        console.log("KEY PRESSED");
+    });
+    
+    txt.addEventListener('keyup',function(){
+        console.log("KEY RELEASED");
+    });
+
+    txt.addEventListener('keypress',function(){
+        console.log("KEY press");
+    });
+}
