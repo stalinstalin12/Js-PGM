@@ -197,3 +197,42 @@ console.log("\n\n\n");
         console.log("KEY press");
     });
 }
+
+//spread operator
+{
+console.log("\n\n\n");
+ let arr=[1,2,3];
+ console.log("arr :",arr);
+ let arr1=[...arr];
+ console.log("arr1 :",arr1);
+ console.log("\n\n\n");
+let obj={a1:1,a2:2};
+console.log(obj);
+let obj2={...obj};
+console.log(obj2);
+}
+
+//destructing
+console.log("\n\n\n");
+let[a1,b1,c1,d1,e1]=arr;
+console.log(a1);
+console.log(b1);
+console.log(c1);
+
+//nested destructing
+console.log("\n\n\n");
+let matrix=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+];
+console.log(matrix);
+let [row1,row2,[g,h,i]]=matrix;
+console.log(row1);
+console.log(row2);
+console.log(row3);
+
+let [a2,b2,c2]=row1;
+console.log(1);
+console.log(b2);
+console.log(c2);
