@@ -91,3 +91,63 @@ const count=people.reduce((tot,i)=>{
 
 },{});
 console.log(count);
+
+console.log("\n\n\n\n\n");
+let obj={
+    name:"Zodge",
+    age:26,
+    greeting:function(){
+        console.log("hello",this.name,"your age is", this.age);
+    }
+}
+console.log(obj);
+console.log(obj.name);
+console.log(obj.age);
+obj.greeting();
+
+//constructor
+console.log("\n\n\n\n\n");
+function person(name,age,mark){
+    this.name=name;
+    this.age=age;
+    this.mark=mark;
+    this.greeting=function(){
+        console.log(`hello ${this.name} your age is ${this.age}`);
+    }
+}
+let person1=new person("Shahrukh",58,89);
+console.log(person1);
+person1.greeting();
+let person2=new person("Vikram",59,78);
+console.log(person2);
+person2.greeting();
+
+person2.city="Mumbai";
+console.log(person2);
+person.prototype.getMark=function(){
+    console.log("name :",this.name,"\nmark :",this.mark);
+}
+person2.getMark();
+person1.getMark();
+
+//class
+{
+class person{
+    name;
+    age;
+    mark;
+
+    constructor(name,age,mark){
+        this.name=name;
+        this.age=age;
+        this.mark=mark;
+
+    }
+    greeting(){
+        console.log(`name ${this.name} age ${this.age} mark${this.mark}`);     
+    }
+   
+} let p=new person("kamal",26,99);
+    console.log(p);
+    p.greeting();
+}
