@@ -236,3 +236,43 @@ let [a2,b2,c2]=row1;
 console.log(1);
 console.log(b2);
 console.log(c2);
+
+console.log("\n\n\n\n\n");
+let obj={
+    name:"Zodge",
+    age:26,
+    greeting:function(){
+        console.log("hello",this.name,"your age is", this.age);
+    }
+}
+console.log(obj);
+console.log(obj.name);
+console.log(obj.age);
+obj.greeting();
+
+//constructor
+console.log("\n\n\n\n\n");
+function person(name,age,mark){
+    this.name=name;
+    this.age=age;
+    this.mark=mark;
+    this.greeting=function(){
+        console.log(`hello ${this.name} your age is ${this.age}`);
+    }
+}
+let person1=new person("Shahrukh",58,89);
+console.log(person1);
+person1.greeting();
+let person2=new person("Vikram",59,78);
+console.log(person2);
+person2.greeting();
+
+person2.city="Mumbai";
+console.log(person2);
+person.prototype.getMark=function(){
+    console.log("name :",this.name,"\nmark :",this.mark);
+}
+person2.getMark();
+person1.getMark();
+
+//class
