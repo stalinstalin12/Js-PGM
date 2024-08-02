@@ -275,4 +275,3 @@ person.prototype.getMark=function(){
 person2.getMark();
 person1.getMark();
 
-//class

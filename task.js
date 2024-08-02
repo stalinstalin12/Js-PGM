@@ -174,3 +174,68 @@ console.log(count);
         car1.info();
         console.log(car1.Color);//GETTER
     }
+    console.log("\n\n\n\n");
+{
+  class Button{
+    button;
+    constructor(content){
+        this.button=document.createElement('button');
+        this.button.innerHTML=content;
+        document.body.appendChild(this.button);
+    }
+    set width(width){
+        this.button.style.width=width+"px"
+    }
+    set height(height){
+        this.button.style.height=height+"px"
+    }
+    get width(){
+        return this.button.style.width;
+    }
+    get height(){
+        return this.button.style.height;
+    }
+    onClick(fn){
+        this.button.onclick=function(){
+            console.log(this);
+            console.log(this.button);
+            this.button.style.width=50+"px";
+            this.button.style.height=30+"px"
+            fn();
+        }.bind(this);
+    }
+  }  
+  let button1=new Button('click');
+  console.log(button1);
+  button1.width=100;
+  button1.height=50
+  console.log(button1);
+
+  console.log(button1.width);
+  console.log(button1.height);
+  button1.onClick(function(){console.log("clicked...");    
+  });
+  class BlackButton extends Button{
+    constructor(content){
+        super(content);
+        this.button.style.background="black";
+        this.button.style.color="white";
+    }
+    //method overriding
+    onClick(fn){
+        this.button.onclick=function(){
+            console.log(this);
+            console.log(this.button);
+            this.button.style.padding=10+"px";
+            fn();
+        }.bind(this);
+    }
+  }
+  let bButton=new BlackButton("Don't click");
+  bButton.onClick(function(){
+    console.log("Blac button clicked");
+  });
+
+
+
+}
