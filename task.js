@@ -239,3 +239,52 @@ console.log(count);
 
 
 }
+
+
+{
+    console.log("\n\n\n");
+    class Paragraph{
+        Para;
+        constructor(content){
+            this.para=document.createElement('p');
+            this.para.innerHTML=content;
+            document.body.appendChild(this.para);
+        }
+        onClick(fn){
+            this.para.onclick=function(){
+                console.log(this);
+                console.log(this.para);
+                this.para.style.background="red";
+                this.para.style.color="black";
+                this.para.style.lineHeight=3;
+                fn();
+            }.bind(this);
+        }
+      }  
+      let p1=new Paragraph('The MERN stack is a collection of technologies that help developers build robust and scalable web applications using JavaScript. The acronym “MERN” stands for MongoDB, Express, React, and Node.js, with each component playing a role in the development process. MongoDB serves as a document-oriented database that can efficiently store data in JSON format. Express is a web application framework that provides a set of features to streamline the assembly of web applications. React is a front-end JavaScript library that offers a large toolkit for crafting user interfaces. Node.js is the runtime environment for execution of JavaScript code on the server side, coordinating communication between front-end and back-end components.');
+      console.log(p1);
+      p1.onClick(function(){console.log("Paragraph modified");    
+      });
+
+      class BluePara extends Paragraph{
+        constructor(content){
+            super(content);
+            
+        }
+        onClick(fn){
+            this.para.onclick=function(){
+                console.log(this);
+                console.log(this.para);
+                this.para.style.background="blue";
+                this.para.style.color="white";
+                this.para.style.lineHeight=2;
+                fn();
+            }.bind(this);
+        }
+
+      }
+      let p2= new BluePara();
+      p2.onClick(function(){
+        console.log("  ");
+      });
+}
