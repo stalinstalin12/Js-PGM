@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <style>
-        table,th,tr{
+        table,th,tr,td{
             border: 2px solid black;
             border-collapse: collapse;
+            padding: 15px;
+           margin: auto;
         }
     </style>
     <meta charset="UTF-8">
@@ -13,13 +15,17 @@
 </head>
 <body>
     <button id="btn">click</button>
-    <table id="datacontainer">
-        <tr >
+    <table>
+        <thead>
+        <tr>
             <th>name</th>
             <th>username</th>
             <th>email</th>
             <th>website</th>
+            <th>city</th>
         </tr>
+    </thead>
+    <tbody id="datacontainer"></tbody>
     </table>
 
     <script src="script1.js"></script>

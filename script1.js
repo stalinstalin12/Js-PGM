@@ -30,6 +30,7 @@ xhr.onreadystatechange=function(){
               <td>${datas[i].username} </td>
               <td>${datas[i].email} </td>
               <td>${datas[i].website} </td>
+              <td>${datas[i].address.city} </td>
               </tr>`
          
 
