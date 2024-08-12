@@ -31,6 +31,7 @@ xhr.onreadystatechange=function(){
               <td>${datas[i].email} </td>
               <td>${datas[i].website} </td>
               <td>${datas[i].address.city} </td>
+              <td><button onclick="handle(${datas[i].id})">View</button></td>
               </tr>`
          
 
@@ -43,4 +44,17 @@ xhr.onreadystatechange=function(){
             
         }
     }
+}
+function handle(id){
+    console.log(id);
+window.location.href=`page2.html?id=${id}`;
+return;
+}
+function loadUser(){
+    console.log("loading....");
+    let location =window.location;
+    console.log(location);
+    let querystring=location.search;
+    console.log(querystring);
+    
 }
