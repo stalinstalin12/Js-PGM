@@ -105,7 +105,7 @@ const reg4=/swim.$/i;
 const res4=reg4.test(str);
 console.log(res4);
 }
-console.log("\n\n\n")
+console.log("\n\n\n");
 
 {
     let str="hellooo";
@@ -125,11 +125,69 @@ console.log("\n\n\n")
     const res3=reg3.test(str);
     console.log(res3);
 
-    const reg4=/oo+$/;
+    const reg4=/l+$/;
     const res4=reg4.test(str);
     console.log(res4);
 
     const reg5=/z?$/;
     const res5=reg5.test(str);
     console.log(res5);
+}
+
+console.log("\n\n\n");
+
+{
+    let str="hello";
+
+    const reg=/l{2}o$/;
+    const res=reg.test(str);
+    console.log(res);
+
+    const reg1=/l{2,4}o$/;
+    const res1=reg1.test(str);
+    console.log(res1);
+
+    const reg2=/HeL{2,4}o$/i;
+    const res2=reg2.test(str);
+    console.log(res2);
+
+    const reg3=/l{2,}o$/;
+    const res3=reg3.test(str);
+    console.log(res3);
+
+    const reg4=/\d/i;
+    const res4=reg4.test(str);
+    console.log(res4);
+
+    const reg5=/\D/i;
+    const res5=reg5.test(str);
+    console.log(res5);
+
+    const reg6=/./;
+    const res6=reg6.test(str);
+    console.log(res6);
+
+    const reg7=/\./;
+    const res7=reg7.test(str);
+    console.log(res7);
+
+}
+
+console.log("\n\n\n\n\n");
+function checkDate()
+{
+let date=document.getElementById("date").value;
+const reg=/^([012]\d|3[01])-([0]\d|1[012])-\d{4}$/i;
+const res=reg.test(date);
+console.log(res);
+if(res){
+    document.getElementById("result").style.color="green";
+    document.getElementById("result").innerHTML=date;
+    console.log("valid");
+}
+else{
+    document.getElementById("result").style.color="red";
+    document.getElementById("result").innerHTML="enter valid date";
+    console.log("invalid");
+}
 }
